@@ -1,0 +1,40 @@
+{
+    "log4js": {
+        "level": "trace",
+        "logDir": "/var/log/rclive",
+        
+        "@todo logFile is obsolete": true,
+        "logFile": "/var/log/rclive/rclive-backend.log"
+    },
+    
+    "mongo": {
+        "host": "@@MONGO_PORT_27017_TCP_ADDR@@",
+        "port": @@MONGO_PORT_27017_TCP_PORT@@,
+        "dbName": "rclive",
+        "username" : "@todo",
+        "password" : "@todo"
+    },
+    
+    "aws": {
+        "accessKey": "@@AWS_ACCESS_KEY@@",
+        "secretKey": "@@AWS_SECRET_KEY@@"
+    },
+
+    "s3": {
+        "logArchiveDir": "/var/spool/rclive/s3_upload",
+        "bucket": "@@S3_BUCKET",
+        "maxFileSize": 102400
+    },
+
+    "restPort":           8081,
+    "webPort":            9090,
+    "streamReceiverPort": 8080,
+    
+    "zmqSocketPath": "/var/run/rclive/zmq_sockets",
+    
+    "statsd" : {
+        "host": "localhost",
+        "port": 8125,
+        "prefix": "rclive."
+    }
+}
