@@ -1,4 +1,4 @@
-FROM         zardoz.podzone.org:11002/core/supervised
+FROM         zardoz.podzone.org:11003/core/supervised
 MAINTAINER   Brian Lalor <brian@autosportlabs.com>
 
 EXPOSE 8080 8081 9090
