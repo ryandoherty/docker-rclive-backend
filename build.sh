@@ -2,7 +2,7 @@
 
 set -e
 
-IMAGE="localhost:5000/apps/rclive-backend"
+IMAGE="zardoz.podzone.org:11003/apps/rclive-backend"
 
 docker build -t ${IMAGE} .
 docker push ${IMAGE}
