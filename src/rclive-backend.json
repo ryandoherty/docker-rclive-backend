@@ -22,7 +22,7 @@
 
     "s3": {
         "logArchiveDir": "/var/spool/rclive/s3_upload",
-        "bucket": "@@S3_BUCKET",
+        "bucket": "@@S3_BUCKET@@",
         "maxFileSize": 102400
     },
 
@@ -33,8 +33,8 @@
     "zmqSocketPath": "/var/run/rclive/zmq_sockets",
     
     "statsd" : {
-        "host": "localhost",
-        "port": 8125,
+        "host": "@@STATSD_HOST@@",
+        "port": @@STATSD_PORT@@,
         "prefix": "rclive."
     }
 }

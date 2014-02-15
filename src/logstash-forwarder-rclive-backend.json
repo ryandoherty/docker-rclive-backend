@@ -1,0 +1,6 @@
+{
+    "paths": [
+        "/var/log/rclive/*.log"
+    ],
+    "type": "bunyan"
+}
