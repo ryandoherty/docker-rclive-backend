@@ -23,6 +23,9 @@ mv logstash-forwarder-*.json /etc/logstash-forwarder.d/
 
 mv logrotate-rclive-backend.conf /etc/logrotate.d/rclive-backend
 
+## overwrite
+mv -f collectd-processes.conf /etc/collectd.d/processes.conf
+
 chown -R rclive:rclive /var/{log,run,spool}/rclive
 
 yum localinstall -y /tmp/work/node-rclive-backend*.rpm
