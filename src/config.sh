@@ -13,7 +13,7 @@ fi
 
 useradd -r rclive
 
-mkdir -p /var/log/rclive /var/run/rclive/zmq_sockets /var/lib/rclive
+mkdir -p /var/{log,lib,spool}/rclive /var/run/rclive/zmq_sockets
 
 mv rclive-backend.json /var/lib/rclive/rclive-backend.json.in
 mv launch-rclive-backend.sh /usr/local/bin/
@@ -23,7 +23,7 @@ mv logstash-forwarder-*.json /etc/logstash-forwarder.d/
 
 mv logrotate-rclive-backend.conf /etc/logrotate.d/rclive-backend
 
-chown -R rclive:rclive /var/log/rclive /var/run/rclive
+chown -R rclive:rclive /var/{log,run,spool}/rclive
 
 yum localinstall -y /tmp/work/node-rclive-backend*.rpm
 chmod +x /opt/rclive/backend/bin/rclive-backend

@@ -17,4 +17,6 @@ sed \
     < /var/lib/rclive/rclive-backend.json.in \
     >| /var/run/rclive/rclive-backend.json
 
-exec /opt/rclive/backend/bin/rclive-backend /var/run/rclive/rclive-backend.json
+chown -R rclive:rclive /var/spool/rclive
+
+exec runuser -s /bin/bash rclive -c "/opt/rclive/backend/bin/rclive-backend /var/run/rclive/rclive-backend.json"
